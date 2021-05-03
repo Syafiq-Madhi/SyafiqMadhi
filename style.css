@@ -1,0 +1,115 @@
+		*{
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		.box {
+			background-color: #c1d2d8;
+			display: grid;
+			grid-gap: 0px;
+			grid-template-columns: 1fr;
+			/*grid-auto-rows: 1fr;*/
+			grid-template-areas: 
+			"header"
+			"main"
+			"first"
+			"second"
+			"third"
+			"fourth"
+			"fifth"
+			"six"
+			"seven"
+			"eight"
+			"nine";
+			}
+
+
+			header{
+			background-image: linear-gradient(to right, white, lightblue);
+			height: 25px;
+			display: flex;
+			align-items: center;
+			padding: 30px;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			nav {
+				flex-grow: 1;
+			}
+
+			li, .nava{
+				font-weight: 500;
+				font-size: 16px;
+				color: black;
+				text-decoration: none;
+			}
+
+			ul li {	
+			display: inline-block;
+			padding: 0px 20px;
+			}
+
+			li a:hover {
+				background-color: aqua;
+				border-width: 1px;
+				border-radius: 6px;
+			}
+
+			.text {
+				font-size: 2em;
+			}
+			
+			a:hover	{
+				text-shadow: 2px 2px 4px #000000;
+			}
+
+			main{
+				background-image: linear-gradient(to right, white, lightblue);
+				text-align: center;
+			}
+
+			img{
+			height: 60vh;
+			width: 100vh;
+			background-color: yellow;
+			transition: transform 0.5s ease-out;
+			}
+
+			img:hover{
+			transform: rotate(0deg) scale(1.05);
+			}
+
+			@keyframes example {
+  			   {top:10px;}
+ 			}
+
+			footer{
+			background-color: lightblue;
+			clear: both;
+			height: 20px;
+			text-align: center;
+			position: sticky;
+			bottom:0px;
+			align-self: flex-start;
+			}
+
+			@media  screen and (max-width: 600px) {
+				
+			.box {
+				background-color: #c1d2d8;
+				display: grid;
+				grid-gap: 0px;
+				grid-template-columns: 1fr;
+				grid-template-areas: 
+				"header header"
+				"main main"
+				"first first"
+				"second second"
+				"third third"
+				"fourth fourth";
+				}
+			}

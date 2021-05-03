@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Corporate</title>
+<link rel="stylesheet" href="design.css">
+</head>
+<body>
+	
+	<header id="top" style="grid-area: header">
+		<nav style="grid-area: nav">
+		<ul>
+			<li><a class="nava" href="index.html">Home</a></li>
+			<li><a class="nava" href="formal.html">Formal cards</a></li>
+			<li><a class="nava" href="informal.html">Informal cards</a></li>
+			<li><a class="nava" href="customs.html">custom cards</a></li>
+			<li><a class="nava" href="aboutus.html">About Us</a></li>
+		</ul>
+	</nav>
+	<img style="float: right; width: 60px; height: 60px;" src="letter.png">
+</header>
+
+	<main>
+		<div class="text">Customize your coorporate invite card:</div>
+		<div  id="div_print" class="printit">
+		<textarea style="width: 170px; height: 20px; position: relative; top: 105px; left: 160px; font-size: 10px; resize: none;">Replace with recipient name</textarea>
+		<textarea rows="10" cols="80" style="resize: none; width: 300px; height: 155px; position: relative; top: 270px; right: 85px; font-size: 2em;">Replace with your greetings</textarea>
+		<div id="nav"><img src="corporate2.png"></div>
+	</div>
+	<input name="b_print" type="button" class="ipt" onClick="printdiv('div_print');" value=" Finalize ">
+
+	</main>
+
+	<footer style="grid-area: footer">
+		BWEP-AS3
+	</footer>
+
+	<script language="javascript">
+        function printdiv(printpage) {
+            var headstr = "<html><head><title></title></head><body>";
+            var footstr = "</body>";
+            var newstr = document.all.item(printpage).innerHTML;
+            var oldstr = document.body.innerHTML;
+            document.body.innerHTML = headstr + newstr + footstr;
+            window.print();
+            document.body.innerHTML = oldstr;
+            return false;
+        }
+    </script>
+
+</body>
+</html>
